@@ -1,6 +1,5 @@
 body {
     width: 100%;
-    background-color: rgb(68, 67, 71);
     color: white;
     font-family: 'Aladin', cursive;
 }
@@ -19,7 +18,7 @@ body {
 
 .rules {
     width: 50%;
-    height: 40px;
+    height: 70px;
     background: rgb(3, 53, 82);
     color: white;
     text-align: center;
@@ -29,14 +28,14 @@ body {
     padding-right: 50px;
     padding-bottom: 20px;
     padding-top: 20px;
-    font-size: 16px;
+    font-size: 20px;
 
 }
 
 #target-number {
     width: 376px;
-    height: 30px;
-    font-size: 20px;
+    height: 50px;
+    font-size: 32px;
     background: rgb(3, 53, 82);
     color: white;
     text-align: center;
@@ -49,8 +48,8 @@ body {
 
 #user-score {
     width: 376px;
-    height: 30px;
-    font-size: 20px;
+    height: 50px;
+    font-size: 32px;
     background: rgb(3, 53, 82);
     color: white;
     text-align: center;
@@ -59,19 +58,63 @@ body {
     float: left;
 }
 
-#emerald {
+#green {
     clear: both;
     width: 150px;
     height: 150px;
-    margin-left: 250px;
-    margin-top: 25px;
     float: left;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 270px;
 }
-#ruby {
-    width: 200px;
+
+#purple {
+    width: 150px;
     height: 150px;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 25px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+#yellow {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+#blue {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
     float: left;
 }
+
+#wins {
+    clear: both;
+    width: 376px;
+    height: 50px;
+    font-size: 32px;
+    background: rgb(3, 53, 82);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 250px;
+    margin-right: 11px;
+    float: left;
+}
+
+#losses{
+    width: 376px;
+    height: 50px;
+    font-size: 32px;
+    background: rgb(3, 53, 82);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+    float: left;
+}
+
