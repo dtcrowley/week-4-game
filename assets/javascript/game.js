@@ -1,4 +1,64 @@
+$(document).ready(function(){
 
+    var targetNumber;
+    var userScore;
+    var green;
+    var purple;
+    var yellow;
+    var blue;
+    var wins = 0;
+    var losses = 0;
+
+    var numberOptions = [2, 5, 6, 9];
+
+    for (var i = 0; i < numberOptions.length; i++) {
+
+      var image1 = $("<img>")
+      var image2 = $("<img>")
+      var image3 = $("<img>")
+      var image4 = $("<img>")
+  
+      image1.addClass("green");
+      image2.addClass("purple");
+      image3.addClass("yellow");
+      image4.addClass("blue");
+  
+      image1.attr("src", "assets/images/emerald.png")
+      image2.attr("src", "assets/images/purple.png")
+      image3.attr("src", "assets/images/yellow.png")
+      image4.attr("src", "assets/images/blue.png")
+
+      image1.attr("data-crystalvalue", numberOptions[i]);
+      image2.attr("data-crystalvalue", numberOptions[i]);
+      image3.attr("data-crystalvalue", numberOptions[i]);
+      image4.attr("data-crystalvalue", numberOptions[i]);
+
+
+    };
+
+    function start(){
+      targetNumber = Math.floor(Math.random() * 100) + 1;
+      userScore = 0;
+      $("#target-number").text("Target Number: " + targetNumber);
+      $("#user-score").text("Your Score: " + userScore);
+
+
+    }
+
+
+
+
+    start ();
+    $(".buttons").on(function(){
+
+    })
+
+
+
+
+
+
+})
 
 // ===========================================================================================================
 //var targetNumber = 53;

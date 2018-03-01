@@ -58,7 +58,7 @@ body {
     float: left;
 }
 
-#green {
+.green {
     clear: both;
     width: 150px;
     height: 150px;
@@ -68,7 +68,7 @@ body {
     margin-left: 270px;
 }
 
-#purple {
+.purple {
     width: 150px;
     height: 150px;
     float: left;
@@ -76,7 +76,7 @@ body {
     margin-right: 50px;
 }
 
-#yellow {
+.yellow {
     width: 150px;
     height: 150px;
     float: left;
@@ -84,7 +84,7 @@ body {
     margin-right: 50px;
 }
 
-#blue {
+.blue {
     width: 150px;
     height: 150px;
     margin-top: 10px;

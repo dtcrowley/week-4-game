@@ -7,29 +7,26 @@
     <title>The Crystal Collector Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet">
 </head>
 <body>
     <img src="https://wallpapertag.com/wallpaper/small/0/6/3/49612-mountains-wallpaper-1920x1080-for-android-40.jpg#.WpdNwXwdypI.link" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: -1" alt="background">
-   <h1 class="game">Crystals Collector!</h1>
-   <br>
-   <h2 class="rules">Game Instructions: Each crystal has been given a value. When each crystal is clicked, you will gain points according
+    <h1 class="game">Crystals Collector!</h1>
+        <br>
+    <h2 class="rules">Game Instructions: Each crystal has been given a value. When each crystal is clicked, you will gain points according
        to the value of that crystal. The object is to select the correct sequence of crystals to gain the target number of points.
        If you exceed the target number, you lose. If your point total matches the target number, you win! 
-   </h2>
-   <div id="target-number">Target Number:</div>
-   <div id="user-score">Your Score:</div>
+    </h2>
+    <div id="target-number"></div>
+    <div id="user-score"></div>
    
-   <img id="green" src="assets/images/emerald.png">
-   <img id="purple" src="assets/images/purple.png">
-   <img id="yellow" src="assets/images/yellow.png">
-   <img id="blue" src="assets/images/blue.png">
+    <div class="buttons">  
+    </div>
 
-   <div id="wins">Wins:</div>
-   <div id="losses">Losses: </div>
-
-   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <div id="wins"></div>
+    <div id="losses"></div>
     
-   <script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </body>
 </html>
