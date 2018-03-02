@@ -40,7 +40,6 @@ $(document).ready(function(){
       purple = Math.floor(Math.random() * 10) + 1;
       yellow = Math.floor(Math.random() * 10) + 1;
       blue = Math.floor(Math.random() * 10) + 1;
-
     } 
 
     $('#crystal1').on ('click', function(){
@@ -48,11 +47,15 @@ $(document).ready(function(){
       $('#user-score').text("Your Score: " + userScore);
       if (userScore == targetNumber){
         wins++;
-        wins();
+        alert("Hey, you won!");
+        $('#wins').text("Wins: " + wins);
+        reset();
       }
       else if (userScore > targetNumber){
         losses++;
-        losses();
+        alert("Oops... You lost!"); 
+        $('#losses').text("Losses: " + losses);
+        reset();
       }
     
     
@@ -61,11 +64,15 @@ $(document).ready(function(){
       $("#user-score").text("Your Score: " + userScore); 
       if (userScore == targetNumber){
         wins++;
-        wins();
+        alert("Hey, you won!");
+        $('#wins').text("Wins: " + wins);
+        reset();
       }
       else if (userScore > targetNumber){
         losses++;
-        losses();
+        alert("Oops... You lost!"); 
+        $('#losses').text("Losses: " + losses);
+        reset();
       }  
     })
     
@@ -74,11 +81,15 @@ $(document).ready(function(){
       $('#user-score').text("Your Score: " + userScore); 
       if (userScore == targetNumber){
         wins++;
-        wins();
-        }
+        alert("Hey, you won!");
+        $('#wins').text("Wins: " + wins);
+        reset();
+      }
       else if (userScore > targetNumber){
-        losses++;
-        losses();
+        losses++
+        alert("Oops... You lost!"); 
+        $('#losses').text("Losses: " + losses);
+        reset();
       }   
     })
 
@@ -87,11 +98,16 @@ $(document).ready(function(){
       $('#user-score').text("Your Score: " + userScore); 
       if (userScore == targetNumber){
         wins++;
-        wins();
+        alert("Hey, you won!");
+        $('#wins').text("Wins: " + wins);
+        reset();
+        
       }
       else if (userScore > targetNumber){
         losses++;
-        losses();
+        alert("Oops... You lost!"); 
+        $('#losses').text("Losses: " + losses);
+        reset();
       } 
     });
 
