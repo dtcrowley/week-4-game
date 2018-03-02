@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var targetNumber = Math.floor(Math.random() * 100 + 1);
+    var targetNumber = Math.floor(Math.random() * 100 + 11);
     
     $("#target-number").text("Target Number: " + targetNumber); 
 
