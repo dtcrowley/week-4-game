@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var targetNumber = Math.floor(Math.random() * 100 + 11);
+    var targetNumber = Math.floor(Math.random() * 100 + 20);
     
     $("#target-number").text("Target Number: " + targetNumber); 
 
@@ -24,7 +24,7 @@ $(document).ready(function(){
 
     
     function reset(){
-      var targetNumber = Math.floor(Math.random() * 100 + 1);
+      var targetNumber = Math.floor(Math.random() * 100 + 20);
       $("#target-number").text("Target Number: " + targetNumber); 
       green = Math.floor(Math.random()*11+1);
       purple = Math.floor(Math.random()*11+1);
