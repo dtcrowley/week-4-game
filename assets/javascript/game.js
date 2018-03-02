@@ -19,78 +19,84 @@ $(document).ready(function(){
     var purple;
     var yellow;
     var blue;
-    
-    var numberOptions = [2, 5, 6, 9];
 
-    
-    function reset(){
-      var targetNumber = Math.floor(Math.random() * 100 + 20);
-      $("#target-number").text("Target Number: " + targetNumber); 
-      green = Math.floor(Math.random()*11+1);
-      purple = Math.floor(Math.random()*11+1);
-      yellow = Math.floor(Math.random()*11+1);
-      blue = Math.floor(Math.random()*11+1);
-      
-    } 
+    var losses = function(){
+      alert("Oops... You lost!"); 
+      $('#losses').text("Losses: " + losses);
+      reset();
+    }
 
-    function wins(){
+    var wins = function(){
       alert("Hey, you won!");
       wins++; 
       $('#wins').text("Wins: " + wins);
       reset();
     }
+  
+    function reset(){
+      var targetNumber = Math.floor(Math.random() * 100 + 20);
+      $("#target-number").text("Target Number: " + targetNumber); 
+      green = Math.floor(Math.random() * 10) + 1;
+      purple = Math.floor(Math.random() * 10) + 1;
+      yellow = Math.floor(Math.random() * 10) + 1;
+      blue = Math.floor(Math.random() * 10) + 1;
 
-    function losses(){
-      alert("Oops... You lost!");
-      losses++; 
-      $('#losses').text("Losses: " + losses);
-      reset();
-    }
+    } 
 
     $('#crystal1').on ('click', function(){
-      newUserScore = userScore + green;
-      $('#user-score').text(newUserScore);
-        console.log(newUserScore);
-      if (newUserScore == targetNumber){
+      userScore = userScore + green;
+      $('#user-score').text("Your Score: " + userScore);
+      if (userScore == targetNumber){
+        wins++;
         wins();
       }
-      else if ( newUserScore > targetNumber){
+      else if (userScore > targetNumber){
+        losses++;
         losses();
       }
     
     
     $('#crystal2').on ('click', function(){
-      newUserScore = userScore + purple;
-      $("#user-score").text("Your Score: " + newUserScore); 
-      if (newUserScore == targetNumber){
+      userScore = userScore + purple;
+      $("#user-score").text("Your Score: " + userScore); 
+      if (userScore == targetNumber){
+        wins++;
         wins();
       }
-      else if ( newUserScore > targetNumber){
+      else if (userScore > targetNumber){
+        losses++;
         losses();
       }  
     })
     
     $('#crystal3').on ('click', function(){
-      newUserScore = userScore + yellow;
-      $('#user-score').text(newUserScore); 
-      if (newUserScore == targetNumber){
+      userScore = userScore + yellow;
+      $('#user-score').text("Your Score: " + userScore); 
+      if (userScore == targetNumber){
+        wins++;
         wins();
         }
-      else if ( newUserScore > targetNumber){
+      else if (userScore > targetNumber){
+        losses++;
         losses();
       }   
     })
 
     $('#crystal4').on ('click', function(){
-      newUserScore = userScore + blue;
-      $('#user-score').text(newUserScore); 
-      if (newUserScore == targetNumber){
+      userScore = userScore + blue;
+      $('#user-score').text("Your Score: " + userScore); 
+      if (userScore == targetNumber){
+        wins++;
         wins();
       }
-      else if ( newUserScore > targetNumber){
+      else if (userScore > targetNumber){
+        losses++;
         losses();
       } 
     });
+
   });
+
+  reset();
 
 }) 
