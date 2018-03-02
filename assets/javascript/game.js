@@ -6,7 +6,8 @@ $(document).ready(function(){
 
     
     var userScore = 0;
-    $("#user-score").text("Your Score: " + userScore);
+
+    $("#user-score").text("Your Score: " + userScore);    
     
     var wins = 0;
     $("#wins").text("Wins: " + wins);
@@ -25,10 +26,10 @@ $(document).ready(function(){
     function reset(){
       var targetNumber = Math.floor(Math.random() * 100 + 1);
       $("#target-number").text("Target Number: " + targetNumber); 
-      green= Math.floor(Math.random()*11+1);
-      purple= Math.floor(Math.random()*11+1);
-      yellow= Math.floor(Math.random()*11+1);
-      blue= Math.floor(Math.random()*11+1);
+      green = Math.floor(Math.random()*11+1);
+      purple = Math.floor(Math.random()*11+1);
+      yellow = Math.floor(Math.random()*11+1);
+      blue = Math.floor(Math.random()*11+1);
       
     } 
 
@@ -48,7 +49,8 @@ $(document).ready(function(){
 
     $('#crystal1').on ('click', function(){
       newUserScore = userScore + green;
-      $('#user-score').text(newUserScore); 
+      $('#user-score').text(newUserScore);
+        console.log(newUserScore);
       if (newUserScore == targetNumber){
         wins();
       }
@@ -59,7 +61,7 @@ $(document).ready(function(){
     
     $('#crystal2').on ('click', function(){
       newUserScore = userScore + purple;
-      $('#user-score').text(newUserScore); 
+      $("#user-score").text("Your Score: " + newUserScore); 
       if (newUserScore == targetNumber){
         wins();
       }
