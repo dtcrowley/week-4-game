@@ -58,7 +58,7 @@ body {
     float: left;
 }
 
-.green {
+#crystal1 {
     clear: both;
     width: 150px;
     height: 150px;
@@ -68,7 +68,7 @@ body {
     margin-left: 270px;
 }
 
-.purple {
+#crystal2 {
     width: 150px;
     height: 150px;
     float: left;
@@ -76,7 +76,7 @@ body {
     margin-right: 50px;
 }
 
-.yellow {
+#crystal3 {
     width: 150px;
     height: 150px;
     float: left;
@@ -84,7 +84,7 @@ body {
     margin-right: 50px;
 }
 
-.blue {
+#crystal4 {
     width: 150px;
     height: 150px;
     margin-top: 10px;
