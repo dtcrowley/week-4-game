@@ -88,7 +88,7 @@ $(document).ready(function(){
       else if ( newUserScore > targetNumber){
         losses();
       } 
-    })
+    });
   });
 
-    
+}) 
