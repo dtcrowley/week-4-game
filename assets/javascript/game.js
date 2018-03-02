@@ -65,7 +65,8 @@ $(document).ready(function(){
       }
       else if ( newUserScore > targetNumber){
         losses();
-      }   
+      }  
+    })
     
     $('#crystal3').on ('click', function(){
       newUserScore = userScore + yellow;
@@ -76,7 +77,7 @@ $(document).ready(function(){
       else if ( newUserScore > targetNumber){
         losses();
       }   
-    
+    })
 
     $('#crystal4').on ('click', function(){
       newUserScore = userScore + blue;
@@ -86,6 +87,7 @@ $(document).ready(function(){
       }
       else if ( newUserScore > targetNumber){
         losses();
-      }   
-    }
+      } 
+    })
+})
     
