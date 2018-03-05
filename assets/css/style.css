@@ -27,9 +27,13 @@ body {
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
     font-size: 20px;
 
+}
+
+.scores {
+    width: 50%;
 }
 
 #target-number {
@@ -41,8 +45,8 @@ body {
     text-align: center;
     padding: 5px;
     margin-top: 10px;
-    margin-left: 250px;
     margin-right: 11px;
+    margin-left: 250px;
     float: left;
 }
 
@@ -58,37 +62,19 @@ body {
     float: left;
 }
 
-#crystal1 {
+.buttons {
     clear: both;
-    width: 150px;
-    height: 150px;
-    float: left;
-    margin-top: 10px;
-    margin-right: 50px;
-    margin-left: 270px;
+    margin-left: 255px;
 }
 
-#crystal2 {
-    width: 150px;
-    height: 150px;
-    float: left;
+.crystal {
+    width: 185px;
+    height: 185px;
     margin-top: 10px;
-    margin-right: 50px;
-}
+    margin-right: 11px;
+    float: left;
+    
 
-#crystal3 {
-    width: 150px;
-    height: 150px;
-    float: left;
-    margin-top: 10px;
-    margin-right: 50px;
-}
-
-#crystal4 {
-    width: 150px;
-    height: 150px;
-    margin-top: 10px;
-    float: left;
 }
 
 #wins {
@@ -103,6 +89,7 @@ body {
     margin-top: 10px;
     margin-left: 250px;
     margin-right: 11px;
+    margin-bottom: 10px;
     float: left;
 }
 
@@ -115,6 +102,7 @@ body {
     text-align: center;
     padding: 5px;
     margin-top: 10px;
+    margin-bottom: 10px;
     float: left;
 }
 

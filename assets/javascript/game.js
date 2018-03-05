@@ -1,105 +1,96 @@
 $(document).ready(function(){
 
-    var targetNumber = Math.floor(Math.random() * 100 + 20);
-    
+  var targetNumber = Math.floor(Math.random() * 100 + 20);
+  
+  $("#target-number").text("Target Number: " + targetNumber); 
+
+  
+  var userScore = 0;
+
+  $("#user-score").text("Your Score: " + userScore);    
+  
+  var wins = 0;
+  $("#wins").text("Wins: " + wins);
+  
+  var losses = 0;
+  $("#losses").text("Losses: " + losses)
+
+  var green;
+  var purple;
+  var yellow;
+  var blue;
+
+  var numberOptions = [{
+    name: "emerald", 
+    url: "assets/images/emerald.png"
+  }, 
+  {
+    name: "blue", 
+    url: "assets/images/blue.png"
+  }, 
+  {
+    name: "yellow",
+    url: "assets/images/yellow.png"
+  }, 
+  {
+    name: "purple",
+    url: "assets/images/purple.png"
+  }];
+
+  function reset(){
+    userScore = 0;
+    $("#user-score").text("Your Score: " + userScore);
+    targetNumber = Math.floor(Math.random() * 100 + 20);
     $("#target-number").text("Target Number: " + targetNumber); 
 
-    
-    var userScore = 0;
+    function randNum () {
+      return Math.floor(Math.random() * 9) + 1
+    }
 
-    $("#user-score").text("Your Score: " + userScore);    
-    
-    var wins = 0;
-    $("#wins").text("Wins: " + wins);
-    
-    var losses = 0;
-    $("#losses").text("Losses: " + losses)
+    $(".buttons").empty();
 
-    var green;
-    var purple;
-    var yellow;
-    var blue;
+    var buttons = $(".buttons");
+
+
+      
+    for (var i = 0; i < numberOptions.length; i++){
+      var imageCrystal = $("<img>");
+// numberOptions = $("<img>");
+      imageCrystal.addClass("crystal");
+
+      imageCrystal.attr("src", numberOptions[i].url);
+
+      imageCrystal.attr("data-crystalvalue", randNum());
+
+      buttons.append(imageCrystal);
+      
+    }
+  } 
+
   
-    function reset(){
-      userScore = 0;
-      targetNumber = Math.floor(Math.random() * 100 + 20);
-      $("#target-number").text("Target Number: " + targetNumber); 
-      green = Math.floor(Math.random() * 9) + 1;
-      purple = Math.floor(Math.random() * 9) + 1;
-      yellow = Math.floor(Math.random() * 9) + 1;
-      blue = Math.floor(Math.random() * 9) + 1;
-    } 
 
-    $('#crystal1').on ('click', function(){
-      userScore = userScore + green;
-      $('#user-score').text("Your Score: " + userScore);
-      if (userScore == targetNumber){
-        wins++;
-        alert("Hey, you won!");
-        $('#wins').text("Wins: " + wins);
-        reset();
-      }
-      else if (userScore > targetNumber){
-        losses++;
-        alert("Oops... You lost!"); 
-        $('#losses').text("Losses: " + losses);
-        reset();        
-      }
-    
-    })
-    
-    $('#crystal2').on ('click', function(){
-      userScore = userScore + purple;
-      $("#user-score").text("Your Score: " + userScore); 
-      if (userScore == targetNumber){
-        wins++;
-        alert("Hey, you won!");
-        $('#wins').text("Wins: " + wins);
-        reset();
-      }
-      else if (userScore > targetNumber){
-        losses++;
-        alert("Oops... You lost!"); 
-        $('#losses').text("Losses: " + losses);
-        reset();
-      }  
-    })
-    
-    $('#crystal3').on ('click', function(){
-      userScore = userScore + yellow;
-      $('#user-score').text("Your Score: " + userScore); 
-      if (userScore == targetNumber){
-        wins++;
-        alert("Hey, you won!");
-        $('#wins').text("Wins: " + wins);
-        reset();
-      }
-      else if (userScore > targetNumber){
-        losses++
-        alert("Oops... You lost!"); 
-        $('#losses').text("Losses: " + losses);
-        reset();
-      }   
-    })
 
-    $('#crystal4').on ('click', function(){
-      userScore = userScore + blue;
-      $('#user-score').text("Your Score: " + userScore); 
-      if (userScore == targetNumber){
-        wins++;
-        alert("Hey, you won!");
-        $('#wins').text("Wins: " + wins);
-        reset();
-        
-      }
-      else if (userScore > targetNumber){
-        losses++;
-        alert("Oops... You lost!"); 
-        $('#losses').text("Losses: " + losses);
-        reset();
-      } 
-    });
+  $(document).on ("click", ".crystal", function(){
+    console.log(this);
+    var number = $(this).attr("data-crystalvalue");
+    number = parseInt(number);
 
-  reset();
+    userScore = userScore + number;
+    $('#user-score').text("Your Score: " + userScore);
+    if (userScore == targetNumber){
+      wins++;
+      alert("Hey, you won!");
+      $('#wins').text("Wins: " + wins);
+      reset();
+    }
+    else if (userScore > targetNumber){
+      losses++;
+      alert("Oops... You lost!"); 
+      $('#losses').text("Losses: " + losses);
+      reset();        
+    }  
+  });
+
+reset();
 
 }) 
